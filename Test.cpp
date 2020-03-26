@@ -55,5 +55,25 @@ TEST_CASE("Test replacement of v with w") {
     /* Add more checks here */
 }
 
+TEST_CASE("word doesn't appear in text") {
+    string text1 = "xxx valve yyy";
+    CHECK_THROWS(find(text1, "aaa"));
+    CHECK_THROWS(find(text1, "bgfd"));
+    CHECK_THROWS(find(text1, "vallv"));
+    CHECK_THROWS(find(text1, "ybt"));
+
+    string text2 = "hey my tamborine man";
+    CHECK_THROWS(find(text2, "ty"));
+    CHECK_THROWS(find(text1, "san"));
+    CHECK_THROWS(find(text1, "ban"));
+    CHECK_THROWS(find(text1, ""));
+    
+
+    
+    /* Add more checks here */
+}
+
+
+
 
 
