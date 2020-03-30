@@ -49,9 +49,9 @@ bool compareLen(){
         size++;
         j++;
     }
-    printf("size is %d\n",size);
+    //printf("size is %d\n",size);
     if(wordSize==size){
-        printf("wordsize==size\n");
+        //printf("wordsize==size\n");
         return true;
     }
     else
@@ -60,10 +60,10 @@ bool compareLen(){
 
 
 bool compareLetters(int c, int ind){
-    printf("start of compare letters\n");
+    //printf("start of compare letters\n");
     char w=tolower(word[c]);
     char t=tolower(text[ind]);
-    printf("w is %c\n",w);
+    //printf("w is %c\n",w);
                 printf("t is %c\n",t);
     if(w==t)
     return true;
@@ -99,15 +99,15 @@ bool compare(){
 
 
 string find(string sentence,string inputWord){
-    printf("start of find\n");
+    //printf("start of find\n");
 
     strcpy(word,inputWord.c_str());
     wordSize=inputWord.length();
-    printf("word is %s\n",word);
+    //printf("word is %s\n",word);
 
     strcpy(text,sentence.c_str());
     textSize=sentence.length();
-    printf("text is %s\n",text);
+    //printf("text is %s\n",text);
 
     int start=0;
     ind=0;
@@ -115,7 +115,7 @@ string find(string sentence,string inputWord){
         if(phonetic::compare()){
             string str=phonetic::convertToString(text,textSize);
             string s = str.substr(start,ind-start);
-            printf("answer is %s\n",s.c_str());
+            //printf("answer is %s\n",s.c_str());
             return s;
         }
         ind++;
